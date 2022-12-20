@@ -14,11 +14,13 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex min-h-screen flex-col bg-emerald-400">
         <header className="py-5">
-          <h1 className="text-center">FASTGLAS</h1>
+          <h1 className="text-yellow-300 text-center font-outline-2">FASTGLAS</h1>
         </header>
-        <div className="flex flex-1 items-center justify-center flex-col gap-5">
+        <div className="flex flex-1 flex-col items-center justify-center gap-5">
           <div className="flex items-center gap-10">
-            <button className="rotate-0 transition-all hover:rotate-3 active:scale-95 scale-100">
+            <button
+              className="rotate-0 scale-100 transition-all hover:-rotate-3 active:scale-95"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="123"
@@ -68,7 +70,7 @@ const Home: NextPage = () => {
                 {/* google here */}
               </div>
             </div>
-            <button className="rotate-0 transition-all hover:rotate-3 active:scale-95 scale-100">
+            <button className="rotate-0 scale-100 transition-all hover:rotate-3 active:scale-95">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="154"
