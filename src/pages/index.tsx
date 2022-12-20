@@ -14,17 +14,106 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex min-h-screen flex-col bg-emerald-400">
         <header className="py-5">
-          <h1 className="text-center">FAST GLAS</h1>
+          <h1 className="text-center">FASTGLAS</h1>
         </header>
-        <div className="flex flex-1 items-center justify-center">
-          <div>
-            <div className="relative aspect-square w-96">
+        <div className="flex flex-1 items-center justify-center flex-col gap-5">
+          <div className="flex items-center gap-10">
+            <button className="rotate-0 transition-all hover:rotate-3 active:scale-95 scale-100">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="123"
+                height="107"
+                viewBox="0 0 123 107"
+              >
+                <g
+                  id="Gruppe_3"
+                  data-name="Gruppe 3"
+                  transform="translate(-663 -620.851)"
+                >
+                  <g
+                    id="Polygon_2"
+                    data-name="Polygon 2"
+                    transform="translate(786 727.851) rotate(180)"
+                    fill="#fff"
+                  >
+                    <path
+                      d="M 118.6795501708984 104.5 L 4.320450782775879 104.5 L 61.5 5.016881942749023 L 118.6795501708984 104.5 Z"
+                      stroke="none"
+                    />
+                    <path
+                      d="M 61.5 10.03372192382812 L 8.640876770019531 102 L 114.3591232299805 102 L 61.5 10.03372192382812 M 61.5 0 L 123 107 L 0 107 L 61.5 0 Z"
+                      stroke="none"
+                      fill="#000"
+                    />
+                  </g>
+                  <text
+                    id="_-10"
+                    data-name="-10"
+                    transform="translate(704 664.851)"
+                    font-size="24"
+                    font-family="Poppins-BlackItalic, Poppins"
+                    font-weight="800"
+                    font-style="italic"
+                  >
+                    <tspan x="0" y="0">
+                      -10
+                    </tspan>
+                  </text>
+                </g>
+              </svg>
+            </button>
+            <div className="relative aspect-square w-96 p-3">
               <div className="absolute inset-0 translate-x-2 translate-y-2 bg-black" />
               <div className="absolute inset-0 border-4 border-black bg-white">
                 {/* google here */}
               </div>
             </div>
+            <button className="rotate-0 transition-all hover:rotate-3 active:scale-95 scale-100">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="154"
+                height="133"
+                viewBox="0 0 154 133"
+              >
+                <g
+                  id="Gruppe_2"
+                  data-name="Gruppe 2"
+                  transform="translate(-1157 -856)"
+                >
+                  <g
+                    id="Polygon_1"
+                    data-name="Polygon 1"
+                    transform="translate(1157 856)"
+                    fill="#fff954"
+                  >
+                    <path
+                      d="M 111.6797103881836 126.3973388671875 L 78.63404846191406 97.85793304443359 L 77.00000762939453 96.44671630859375 L 75.365966796875 97.85793304443359 L 42.32034301757812 126.3973388671875 L 50.5797233581543 83.59871673583984 L 50.99052810668945 81.46993255615234 L 48.94131088256836 80.76202392578125 L 7.656512260437012 66.50001525878906 L 48.94131088256836 52.23797988891602 L 50.99052810668945 51.53006362915039 L 50.5797233581543 49.40128326416016 L 42.3203239440918 6.602686882019043 L 75.36594390869141 35.14206695556641 L 76.99998474121094 36.55328369140625 L 78.63402557373047 35.14206695556641 L 111.6797180175781 6.602658271789551 L 103.4203109741211 49.40128326416016 L 103.0095062255859 51.53006362915039 L 105.058723449707 52.23797988891602 L 146.343505859375 66.5 L 105.058723449707 80.76202392578125 L 103.0095062255859 81.46993255615234 L 103.4203109741211 83.59871673583984 L 111.6797103881836 126.3973388671875 Z"
+                      stroke="none"
+                    />
+                    <path
+                      d="M 107.8594207763672 13.20527648925781 L 76.99998474121094 39.85657501220703 L 46.140625 13.20531463623047 L 53.85605621337891 53.18511962890625 L 15.31298828125 66.50001525878906 L 53.85605621337891 79.81488037109375 L 46.14067077636719 119.7946853637695 L 77.00000762939453 93.1434326171875 L 107.8594207763672 119.7947158813477 L 100.1439819335938 79.81488037109375 L 138.6870269775391 66.5 L 100.1439819335938 53.18511962890625 L 107.8594207763672 13.20527648925781 M 115.5000534057617 0 L 105.8750305175781 49.875 L 154 66.5 L 105.8750305175781 83.125 L 115.5000534057617 133 L 77.00000762939453 99.75 L 38.50000762939453 133 L 48.12500762939453 83.125 L 1.52587890625e-05 66.50002288818359 L 48.12500762939453 49.875 L 38.49998474121094 3.0517578125e-05 L 76.99998474121094 33.25 L 115.5000534057617 0 Z"
+                      stroke="none"
+                      fill="#000"
+                    />
+                  </g>
+                  <text
+                    id="_10"
+                    data-name="+10"
+                    transform="translate(1210 932)"
+                    font-size="27"
+                    font-family="Poppins-BlackItalic, Poppins"
+                    font-weight="800"
+                    font-style="italic"
+                  >
+                    <tspan x="0" y="0">
+                      +10
+                    </tspan>
+                  </text>
+                </g>
+              </svg>
+            </button>
           </div>
+          <p className="text-5xl font-extrabold italic">{speed} Km/h</p>
         </div>
       </main>
     </>
