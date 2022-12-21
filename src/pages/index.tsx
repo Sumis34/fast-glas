@@ -6,12 +6,12 @@ import PocketBase from "pocketbase";
 const Home: NextPage = () => {
   const speed = 100;
 
-  const pb = new PocketBase("http://127.0.0.1:8090");
+  const pb = new PocketBase("https://pb.noekrebs.ch");
 
   const getRecords = async () => {
     const list = await pb.collection("glasses").getList(1, 100);
 
-    console.log(list);
+    console.log(list.totalItems);
   };
 
   return (
