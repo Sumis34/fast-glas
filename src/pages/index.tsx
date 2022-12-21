@@ -1,18 +1,41 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import PocketBase from "pocketbase";
+import PocketBase, { Record } from "pocketbase";
+import { useEffect, useState } from "react";
 
-const Home: NextPage = () => {
+const PB_ENDPOINT = "https://pb.noekrebs.ch";
+
+function Home() {
   const speed = 100;
 
-  const pb = new PocketBase("https://pb.noekrebs.ch");
+  const pb = new PocketBase(PB_ENDPOINT);
+  // const [glasses, setGlasses] = useState([]);
+  const [activeGlasses, setActiveGlasses] = useState<Record | undefined>();
+  const [skip, setSkip] = useState(1);
+  const [active, setActive] = useState(true);
 
-  const getRecords = async () => {
-    const list = await pb.collection("glasses").getList(1, 100);
+  const getRecords = async (skip: number, take: number) => {
+    const list = await pb
+      .collection("glasses")
+      .getList(skip, take, { $autoCancel: false });
 
-    console.log(list.totalItems);
+    setActive(skip < list.totalItems);
+
+    console.log(list.items);
+
+    setSkip(skip + take);
+    setActiveGlasses(list.items[0]);
   };
+
+  useEffect(() => {
+    try {
+      getRecords(1, 1);
+    } catch (e) {
+      setActive(false);
+      console.log(e);
+    }
+  }, []);
 
   return (
     <>
@@ -30,18 +53,26 @@ const Home: NextPage = () => {
         <div className="flex flex-1 flex-col items-center justify-center gap-5">
           <div className="flex items-center gap-10">
             <button
-              onClick={() => getRecords()}
-              className="rotate-0 scale-100 transition-all hover:-rotate-3 active:scale-95"
+              disabled={!active}
+              onClick={() => getRecords(skip, 1)}
+              className="rotate-0 scale-100 transition-all enabled:hover:-rotate-3 enabled:active:scale-95 disabled:opacity-50"
             >
               <img src="/assets/down.svg" />
             </button>
             <div className="relative aspect-square w-96 p-3">
               <div className="absolute inset-0 translate-x-2 translate-y-2 bg-black" />
-              <div className="absolute inset-0 border-4 border-black bg-white">
-                {/* google here */}
+              <div className="absolute inset-0 flex items-center justify-center border-4 border-black bg-white p-10">
+                <img
+                  src={`${PB_ENDPOINT}/api/files/${activeGlasses?.collectionId}/${activeGlasses?.id}/${activeGlasses?.image}`}
+                  alt=""
+                />
               </div>
             </div>
-            <button className="rotate-0 scale-100 transition-all hover:rotate-3 active:scale-95">
+            <button
+              disabled={!active}
+              onClick={() => getRecords(skip, 1)}
+              className="rotate-0 scale-100 transition-all enabled:hover:-rotate-3 enabled:active:scale-95 disabled:opacity-50"
+            >
               <img src="/assets/up.svg" />
             </button>
           </div>
@@ -50,6 +81,6 @@ const Home: NextPage = () => {
       </main>
     </>
   );
-};
+}
 
 export default Home;
