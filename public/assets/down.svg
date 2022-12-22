@@ -1,0 +1,42 @@
+<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="123"
+                height="107"
+                viewBox="0 0 123 107"
+              >
+                <g
+                  id="Gruppe_3"
+                  data-name="Gruppe 3"
+                  transform="translate(-663 -620.851)"
+                >
+                  <g
+                    id="Polygon_2"
+                    data-name="Polygon 2"
+                    transform="translate(786 727.851) rotate(180)"
+                    fill="#fff"
+                  >
+                    <path
+                      d="M 118.6795501708984 104.5 L 4.320450782775879 104.5 L 61.5 5.016881942749023 L 118.6795501708984 104.5 Z"
+                      stroke="none"
+                    />
+                    <path
+                      d="M 61.5 10.03372192382812 L 8.640876770019531 102 L 114.3591232299805 102 L 61.5 10.03372192382812 M 61.5 0 L 123 107 L 0 107 L 61.5 0 Z"
+                      stroke="none"
+                      fill="#000"
+                    />
+                  </g>
+                  <text
+                    id="_-10"
+                    data-name="-10"
+                    transform="translate(704 664.851)"
+                    font-size="24"
+                    font-family="Poppins-BlackItalic, Poppins"
+                    font-weight="800"
+                    font-style="italic"
+                  >
+                    <tspan x="0" y="0">
+                      -10
+                    </tspan>
+                  </text>
+                </g>
+              </svg>
