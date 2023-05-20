@@ -47,7 +47,7 @@ function Home() {
       <main className="flex min-h-screen flex-col bg-emerald-400">
         <header className="py-5">
           <h1 className="font-outline-2 text-center text-yellow-300">
-            FASTGLAS
+            FASTGLAS GG
           </h1>
         </header>
         <div className="flex flex-1 flex-col items-center justify-center gap-5">
